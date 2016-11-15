@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>index</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+	<!--	usos jquery
+	<script>
+		$( document ).on( "pagecreate", function() {
+			$( "#theme-selector input" ).on( "change", function( event ) {
+				var themeClass = $( "#theme-selector input:checked" ).attr( "id" );
+
+				$( "#testpage" ).removeClass( "ui-page-theme-a ui-page-theme-b" ).addClass( "ui-page-theme-" + themeClass );
+				$( "#ui-body-test" ).removeClass( "ui-body-a ui-body-b" ).addClass( "ui-body-" + themeClass );
+				$( "#ui-bar-test, #ui-bar-form" ).removeClass( "ui-bar-a ui-bar-b" ).addClass( "ui-bar-" + themeClass );
+				$( ".ui-collapsible-content" ).removeClass( "ui-body-a ui-body-b" ).addClass( "ui-body-" + themeClass );
+				$( ".theme" ).text( themeClass );
+			});
+			$( "#opt-shadow input" ).on( "change", function( event ) {
+				if ( $( "#on" ).prop( "checked" ) ) {
+					$( "#testpage" ).removeClass( "noshadow" );
+				} else if ( $( "#off" ).prop( "checked" ) ) {
+					$( "#testpage" ).addClass( "noshadow" );
+				}
+			});
+			$( "#opt-navbars input" ).on( "change", function( event ) {
+				if ( $( "#show" ).prop( "checked" ) ) {
+					$( "#testpage .ui-navbar" ).show();
+					$( "#testpage .ui-footer h4" ).hide();
+				} else if ( $( "#hide" ).prop( "checked" ) ) {
+					$( "#testpage .ui-navbar" ).hide();
+					$( "#testpage .ui-footer h4" ).show();
+				}
+			});
+		});
+	</script>
+	-->
+
+	<!--	usoestilo pagina	-->
+	<style>
+		.noshadow * {
+			-webkit-box-shadow: none !important;
+			-moz-box-shadow: none !important;
+			box-shadow: none !important;
+		}
+		form.ui-mini .ui-field-contain fieldset.ui-controlgroup legend small {
+			color: #666;
+		}
+	</style>
+
+
+</head>
+<body>
+
+<!-- esto es 1 sola pagina -->
+<div data-role="page" id="testpage">
+
+	<!-- cabecera de la pagina -->
+	<div data-role="header" data-position="fixed">
+		<h1>DEMO</h1>
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext">Atras</a>
+		<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-gear">Boton</a>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" class="ui-btn-active ui-state-persist">Menu 1</a></li>
+				<li><a href="#">Menu 2</a></li>
+				<li><a href="#">Menu 3</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- cuerpo de pagina -->
+	<div class="ui-content" role="main">
+		<ul data-role="listview">
+			<li><a href="#panel-reveal">Revelar menu lateral</a></li>
+			<li><a href="#panel-overlay">Sobreponer menu lateral</a></li>
+			<li><a href="#panel-push">Empujar menu lateral</a></li>
+		</ul>
+	</div>
+
+
+	<!-- pie de pagina -->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#">Menu item 1</a></li>
+				<li><a href="#" class="ui-btn-active ui-state-persist">Menu item 2</a></li>
+				<li><a href="#">Menu item 3</a></li>
+			</ul>
+		</div>
+		<h4 style="display:none;">Pie de pagina</h4>
+	</div>
+<!-- termina la pagina -->
+
+
+  <!-- estos son pop up's con diferentes efectos graficos-->
+
+	<div data-role="panel" id="panel-reveal">
+		<ul data-role="listview">
+			<li data-icon="delete"><a href="#" data-rel="close">Cerrar</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">Item</a></li>
+		</ul>
+		<br><br>
+		<button class="ui-btn ui-corner-all ui-shadow">Boton</button>
+	</div>
+
+	<div data-role="panel" id="panel-overlay" data-display="overlay">
+		<ul data-role="listview">
+			<li data-icon="delete"><a href="#" data-rel="close">Cerrar</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">Item</a></li>
+		</ul>
+		<br><br>
+		<button class="ui-btn ui-corner-all ui-shadow">Boton</button>
+	</div>
+
+	<div data-role="panel" id="panel-push" data-display="push">
+		<ul data-role="listview">
+			<li data-icon="delete"><a href="#" data-rel="close">Cerrar</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">Item</a></li>
+		</ul>
+		<br><br>
+		<button class="ui-btn ui-corner-all ui-shadow">Boton</button>
+	</div>
+  <!-- terminan los pop up's -->
+</div><!-- /page -->
+
+</body>
+</html>

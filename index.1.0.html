@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template JQUERY MOBILE</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $( document ).on( "pagecreate", function() {
+
+            $('#div+fieldset').addClass("ui-field-contain");
+            $('#header1').hide();
+
+
+
+            
+//ANTIGUO
+/*
+
+            $( "#theme-selector input" ).on( "change", function( event ) {
+                var themeClass = $( "#theme-selector input:checked" ).attr( "id" );
+
+                $( "#testpage" ).removeClass( "ui-page-theme-a ui-page-theme-b" ).addClass( "ui-page-theme-" + themeClass );
+                $( "#ui-body-test" ).removeClass( "ui-body-a ui-body-b" ).addClass( "ui-body-" + themeClass );
+                $( "#ui-bar-test, #ui-bar-form" ).removeClass( "ui-bar-a ui-bar-b" ).addClass( "ui-bar-" + themeClass );
+                $( ".ui-collapsible-content" ).removeClass( "ui-body-a ui-body-b" ).addClass( "ui-body-" + themeClass );
+                $( ".theme" ).text( themeClass );
+            });
+            $( "#opt-shadow input" ).on( "change", function( event ) {
+                if ( $( "#on" ).prop( "checked" ) ) {
+                    $( "#testpage" ).removeClass( "noshadow" );
+                } else if ( $( "#off" ).prop( "checked" ) ) {
+                    $( "#testpage" ).addClass( "noshadow" );
+                }
+            });
+            $( "#opt-navbars input" ).on( "change", function( event ) {
+                if ( $( "#show" ).prop( "checked" ) ) {
+                    $( "#testpage .ui-navbar" ).show();
+                    $( "#testpage .ui-footer h4" ).hide();
+                } else if ( $( "#hide" ).prop( "checked" ) ) {
+                    $( "#testpage .ui-navbar" ).hide();
+                    $( "#testpage .ui-footer h4" ).show();
+                }
+            });
+*/
+        });
+    </script>
+
+    <style>
+        .noshadow * {
+            -webkit-box-shadow: none !important;
+            -moz-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+        form.ui-mini .ui-field-contain fieldset.ui-controlgroup legend small {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<!-- /page -->
+    <div data-role="page" id="page1">
+<!--    header    -->
+        <div id="header1" data-role="header" data-theme="a">
+
+            <div id="div+fieldset" >
+
+
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-right">
+                      Usuario
+                    </a>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-right">
+                      Lista
+                    </a>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-power ui-btn-icon-right">
+                      Salir
+                    </a>
+                </fieldset>
+            </div>
+
+        </div>
+
+    <!--    contain    -->
+        <div data-role="contain" >
+
+
+
+            <div class="ui-content" >
+                <form>
+                    <div >
+                        <label for="name2">Nombre:</label>
+                        <input type="text" name="name2" id="name2" value="" data-clear-btn="true">
+                        <label for="name2">Contraseña:</label>
+                        <input type="password" name="name2" id="name2" value="" data-clear-btn="true">
+                    </div>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left ">Ingresar</a>
+                </form>
+            </div>
+        </div>
+    <!--    footer    -->
+        <div data-role="footer" data-theme="a">
+        </div>
+        
+    </div>
+
+    <div data-role="page" id="page2">
+<!--cabezera-->
+        <div data-role="header">
+            <a href="#Inicio">Inicio</a>
+            <h1>Pagina 1</h1>
+            
+            <a href="#Inicio">Inicio</a>
+        </div>
+
+    <!-- contenido-->
+        <div data-role="content">
+            <a href="#confirmar" data-role="button" data-rel="dialog" data-theme="b" >
+                eliminar
+            </a>
+            <a href="#Botones" data-role="button" data-theme="e">
+                ir a botones
+            </a>
+        </div>
+
+    <!--pie de pagina-->
+        <div data-role="footer">
+            <h2>esto es pie de pagina 1</h2>
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>
+</html>
